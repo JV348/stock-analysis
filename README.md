@@ -1,4 +1,4 @@
-# Stock-Analysis
+# Green Stock Analysis With VBA
 
 ## Overview of Project 
 
@@ -8,7 +8,8 @@
 
 ### Refactored Script 
 Using images and examples of your code, compare the stock performance between 2017 and 2018, as well as the execution times of the original script and the refactored script.
- '1a) Create a ticker Index
+ 
+	'1a) Create a ticker Index
         tickerIndex = 0
       
         '1b) Create three output arrays
@@ -46,8 +47,7 @@ Using images and examples of your code, compare the stock performance between 20
                 
                     tickerEndingPrices(tickerIndex) = Cells(i, 6).Value
             
-
-                '3d Increase the tickerIndex.
+                '3d) Increase the tickerIndex.
                
                     tickerIndex = tickerIndex + 1
             
@@ -63,22 +63,20 @@ Using images and examples of your code, compare the stock performance between 20
             Cells(4 + i, 3).Value = tickerEndingPrices(i) / tickerStartingPrices(i) - 1
             
         Next i
-![Refactored_Analysis_for_2017](https://github.com/JV348/stock-analysis/blob/211858ae7111e37e8e6470935c61b562ffc21965/Resources/VBA_Challenge_2017.png)
-![Refactored_Analysis_for_2018](https://github.com/JV348/stock-analysis/blob/211858ae7111e37e8e6470935c61b562ffc21965/Resources/VBA_Challenge_2018.png)
-
+![Refactored_Analysis_for_2017_&_Run_Time](https://github.com/JV348/stock-analysis/blob/211858ae7111e37e8e6470935c61b562ffc21965/Resources/VBA_Challenge_2017.png)
+![Refactored_Analysis_for_2018_&_Run_Time](https://github.com/JV348/stock-analysis/blob/211858ae7111e37e8e6470935c61b562ffc21965/Resources/VBA_Challenge_2018.png)
 
 
 ### Previous Script
 
-  'set initial volume to zero
+  'Set initial volume to zero
     totalVolume = 0
+
   'Establish the number of rows to loop over
     rowStart = 2
-    'DELETE: rowEnd = 3013
-    'rowEnd code taken from https://stackoverflow.com/questions/18088729/row-count-where-data-exists
     rowEnd = Cells(Rows.Count, "A").End(xlUp).Row
 
-    'loop over all the rows
+    'Loop over all the rows
     For i = rowStart To rowEnd
     
         'increase totalVolume if ticker is "DQ"
@@ -101,6 +99,8 @@ Using images and examples of your code, compare the stock performance between 20
         End If
         
     Next i
+
+![Original_Script_&_Run_Time](https://github.com/JV348/stock-analysis/blob/ce0ef032166ac698d6ec3bbb585f7a094f3be7d1/Resources/Original_script.png)
  	  
 ## Summary
 
