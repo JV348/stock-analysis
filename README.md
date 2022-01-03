@@ -62,7 +62,7 @@ As requested by the client, we have compared the execution times of the refactor
                 End If
     
              Next i
-    
+
     '4) Loop through your arrays to output the Ticker, Total Daily Volume, and Return.
         For i = 0 To 11
             Worksheets("All Stocks Analysis").Activate
@@ -114,17 +114,17 @@ As requested by the client, we have compared the execution times of the refactor
     For i = 0 To 11
         ticker = tickers(i)
         totalVolume = 0
-            '5) loop through rows in the data
-             Worksheets("2018").Activate
-            For j = 2 To RowCount
-            '5a) Get total volume for current ticker
+          '5) loop through rows in the data
+           Worksheets("2018").Activate
+           For j = 2 To RowCount
+          '5a) Get total volume for current ticker
             If Cells(j, 1).Value = ticker Then
                 
-                totalVolume = totalVolume + Cells(j, 8).Value
+              totalVolume = totalVolume + Cells(j, 8).Value
             
             End If
             
-            '5b) Get starting price for current ticker
+           '5b) Get starting price for current ticker
             If Cells(j - 1, 1).Value <> ticker And Cells(j, 1).Value = ticker Then
                 
                 startingPrice = Cells(j, 6).Value
